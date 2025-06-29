@@ -2,7 +2,7 @@
 'use client';
 export const dynamic = 'force-dynamic';
 
-import dynamic from 'next/dynamic';
+import nextDynamic from 'next/dynamic';
 import React, { useState } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import LoadingUI from '@/components/LoadingUI';
@@ -18,13 +18,13 @@ import {
 } from 'lucide-react';
 import Link from 'next/link';
 
-const Header = dynamic(() => import('@/components/Header'), {
+const Header = nextDynamic(() => import('@/components/Header'), {
   loading: () => (<LoadingUI />),
 })
-const Footer = dynamic(() => import('@/components/Footer'), {
+const Footer = nextDynamic(() => import('@/components/Footer'), {
   loading: () => (<LoadingUI />),
 })
-const PageHeader = dynamic(() => import('@/components/PageHeader'), {
+const PageHeader = nextDynamic(() => import('@/components/PageHeader'), {
   loading: () => (<LoadingUI />),
 })
 
