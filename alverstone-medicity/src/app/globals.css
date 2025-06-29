@@ -1,0 +1,136 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Custom mobile-first responsive utilities */
+@media (max-width: 640px) {
+  .hero-title {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+  
+  .hero-subtitle {
+    font-size: 0.875rem;
+  }
+  
+  .service-card {
+    padding: 1.5rem;
+  }
+  
+  .contact-info-mobile {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .service-cards-tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .service-cards-tablet .service-card:last-child {
+    grid-column: span 2;
+  }
+}
+
+/* Smooth transitions for image changes */
+.hero-image-transition {
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+/* Enhanced hover effects for mobile touch */
+@media (hover: hover) {
+  .touch-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+}
+
+/* Mobile-specific button styles */
+@media (max-width: 640px) {
+  .mobile-button {
+    width: 100%;
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+/* Optimized text sizes for mobile readability */
+@media (max-width: 640px) {
+  .mobile-text-sm {
+    font-size: 0.875rem;
+    line-height: 1.4;
+  }
+  
+  .mobile-text-base {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  .mobile-text-lg {
+    font-size: 1.125rem;
+    line-height: 1.5;
+  }
+}
+
+/* Card responsive improvements */
+.responsive-card {
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 640px) {
+  .responsive-card {
+    text-align: center;
+  }
+  
+  .responsive-card .card-icon {
+    margin: 0 auto 0.75rem auto;
+  }
+  
+  .responsive-card .card-content {
+    align-items: center;
+  }
+}
+
+/* Image aspect ratio utilities */
+.aspect-ratio-4-3 {
+  aspect-ratio: 4 / 3;
+}
+
+.aspect-ratio-16-9 {
+  aspect-ratio: 16 / 9;
+}
+
+@media (max-width: 640px) {
+  .mobile-aspect-square {
+    aspect-ratio: 1 / 1;
+  }
+}
