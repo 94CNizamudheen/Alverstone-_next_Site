@@ -1,15 +1,13 @@
 // app/doctors/profile/page.jsx
 'use client';
+export const dynamic = 'force-dynamic';
+
 import dynamic from 'next/dynamic';
 import React, { useState } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import LoadingUI from '@/components/LoadingUI';
 import { 
   Star, 
-  MapPin, 
-  Phone, 
-  Mail, 
-  Calendar, 
   Clock, 
   Award, 
   GraduationCap, 
