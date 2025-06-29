@@ -52,9 +52,12 @@ const Hero = () => {
             Providing world-class healthcare services with cutting-edge technology,
             compassionate care, and a commitment to improving lives every day.
           </p>
+          <Link href='/services'>
           <button className="bg-blue-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg hover:bg-blue-700 font-semibold text-base sm:text-lg shadow-lg hover:shadow-xl transition-all duration-300 w-full sm:w-auto">
             Our Services
           </button>
+          </Link>
+          
         </motion.div>
 
         {/* Right Floating Circles (Doctor image can be added later) */}
